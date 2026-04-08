@@ -5,14 +5,13 @@
 
     let canvas 
 
-    onMount(() => {
+    onMount(() => { 
     const context = canvas.getContext("2d")
     context.clearRect(0,0, canvas.width, canvas.height)
 
     context.fillStyle = color 
     context.fillRect(0,0, size, size)
     })
-
 </script>
 
 <h3>Canvas Square</h3>
@@ -22,16 +21,17 @@
 
     <nav>
         <label>
-            Size: <input type="range">
+            Size: <input type="range" bind:value={size}>
         </label>
 
         <label>
-            Color: <input type="color">
+            Color: <input type="color" bind:value={color}>
         </label>
 
     </nav>
 </article>
 
+<p>{size} {color}</p>
 <style>
     article {
         display : flex;

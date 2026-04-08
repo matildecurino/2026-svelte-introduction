@@ -1,7 +1,7 @@
 <script>
     let todos = $state([
         { title: "Assignemnt 1", done: false},
-        { title: "Assignemnt 2", done: false},
+        { title: "Assignemnt 2", done: true},
         { title: "Assignemnt 3", done: false}
     ])
 </script>
@@ -10,6 +10,9 @@
 
 <ul>
     {#each todos as todo}
-        <li>{todo.title}</li>
+        <li>
+            <input type="checkbox" bind:checked={todo.title}>
+            {todo.title}
+        </li>
     {/each}
 </ul>

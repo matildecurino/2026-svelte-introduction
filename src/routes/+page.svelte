@@ -1,6 +1,6 @@
 <script>
-    let count = $state(0)
-
+    let count = $state(2)
+    let doubled = count * 2
     console.log("hello world")
 </script>
 
@@ -10,6 +10,11 @@
 <button onclick={() => {count++}}>
     Clicks: {count}
 </button>
+
+<span>
+    doubled is {doubled}
+</span>
+
 <style>
     h1 {
         color: deepskyblue;
